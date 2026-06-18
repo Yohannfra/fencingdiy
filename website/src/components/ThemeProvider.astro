@@ -1,0 +1,14 @@
+---
+// Override of Starlight's ThemeProvider: forces the light theme and ignores
+// any stored preference or system setting (no FOUC: inlined script).
+---
+
+<script is:inline>
+  window.StarlightThemeProvider = (() => {
+    document.documentElement.dataset.theme = "light";
+    try {
+      localStorage.setItem("starlight-theme", "light");
+    } catch {}
+    return { updatePickers() {} };
+  })();
+</script>
