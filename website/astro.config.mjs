@@ -5,7 +5,7 @@ import starlight from '@astrojs/starlight';
 // https://astro.build/config
 export default defineConfig({
     // site: 'https://fencingdiy.com',
-    base: '/fencingdiy',
+    base: '/fencing-diy-tmp',
 	integrations: [
 		starlight({
 			title: 'FencingDIY',
