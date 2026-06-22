@@ -23,6 +23,11 @@ export default defineConfig({
         en: {
           label: "English",
         },
+        // French docs in `src/content/docs/fr/` (`fr` is a built-in
+        // Starlight UI language, so framework strings translate automatically).
+        fr: {
+          label: "Français",
+        },
       },
 
       customCss: ["./src/styles/global.css"],
@@ -42,17 +47,26 @@ export default defineConfig({
       sidebar: [
         {
           label: "Guides",
+          translations: { fr: "Guides" },
           items: [
             // Each item here is one entry in the navigation menu.
-            { label: "Example Guide", slug: "guides/example" },
+            // `slug` is locale-agnostic — Starlight resolves it to the
+            // current language; `translations` localizes the label.
+            {
+              label: "Example Guide",
+              slug: "guides/example",
+              translations: { fr: "Guide d'exemple" },
+            },
             {
               label: "Basic weapon tester",
               slug: "guides/basic-weapon-tester",
+              translations: { fr: "Testeur d'arme basique" },
             },
           ],
         },
         {
           label: "Reference",
+          translations: { fr: "Référence" },
           items: [{ autogenerate: { directory: "reference" } }],
         },
       ],

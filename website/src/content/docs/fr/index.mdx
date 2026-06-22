@@ -1,0 +1,46 @@
+---
+title: Bienvenue sur FencingDIY
+description: Commencez à construire votre site de documentation avec Starlight.
+template: splash # Supprimez ou commentez cette ligne pour afficher la barre latérale du site sur cette page.
+hero:
+  tagline: Une collection d'appareils et d'accessoires d'escrime open source et gratuits
+  image:
+    file: ../../../../public/logo-full-color-fixed.png
+  actions:
+    - text: Guide d'exemple
+      link: guides/example/
+      icon: right-arrow
+---
+
+import { Card, CardGrid } from "@astrojs/starlight/components";
+
+## Prochaines étapes
+
+<CardGrid stagger>
+  <Card title="Mettre à jour le contenu" icon="pencil">
+    Modifiez `src/content/docs/index.mdx` pour voir cette page changer.
+  </Card>
+  <Card title="Changer la mise en page" icon="document">
+    Supprimez `template: splash` dans `src/content/docs/index.mdx` pour afficher
+    une barre latérale sur cette page.
+  </Card>
+  <Card title="Ajouter du contenu" icon="add-document">
+    Ajoutez des fichiers Markdown ou MDX dans `src/content/docs` pour créer de
+    nouvelles pages.
+  </Card>
+  <Card title="Configurer votre site" icon="setting">
+    Modifiez votre `sidebar` et le reste de la configuration dans
+    `astro.config.mjs`.
+  </Card>
+  <Card title="Lire la documentation" icon="open-book">
+    Apprenez-en plus dans [la documentation
+    Starlight](https://starlight.astro.build/).
+  </Card>
+</CardGrid>
+
+<footer class="mt-12 text-center text-sm text-gray-400">
+  Réalisé avec{" "}
+  <a target="_blank" href="https://starlight.astro.build/">
+    Starlight
+  </a>
+</footer>
