@@ -6,12 +6,24 @@ import tailwindcss from "@tailwindcss/vite";
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://fencingdiy.com',
+  site: "https://fencingdiy.com",
+
+  // Forward the bare domain to the default locale so `/` doesn't 404.
+  redirects: { "/": "/en/" },
 
   integrations: [
     starlight({
       title: "FencingDIY",
       logo: { src: "./public/logo-only.png", alt: "logo" },
+
+      // Set English as the default language for this site.
+      defaultLocale: "en",
+      locales: {
+        // English docs in `src/content/docs/en/`
+        en: {
+          label: "English",
+        },
+      },
 
       customCss: ["./src/styles/global.css"],
 
@@ -33,7 +45,10 @@ export default defineConfig({
           items: [
             // Each item here is one entry in the navigation menu.
             { label: "Example Guide", slug: "guides/example" },
-            { label: "Basic weapon tester", slug: "guides/basic-weapon-tester" },
+            {
+              label: "Basic weapon tester",
+              slug: "guides/basic-weapon-tester",
+            },
           ],
         },
         {
