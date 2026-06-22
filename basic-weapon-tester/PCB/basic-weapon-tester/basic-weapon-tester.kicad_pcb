@@ -629,7 +629,6 @@
 			)
 		)
 		(property ki_fp_filters "MountingHole*")
-		(path "/fdd066bb-1d8c-420a-8cca-7c4e2c9df097")
 		(sheetname "/")
 		(sheetfile "basic-weapon-tester.kicad_sch")
 		(units
